@@ -68,7 +68,7 @@ BearSSL::CertStore certStore;
 //
 //--- variaveis usadas na OTA ---
 //
-const String FirmwareVer={"1.06"}; 
+const String FirmwareVer={"1.07"}; 
 //
 #define URL_fw_Version "https://raw.githubusercontent.com/gigahertzinformatica/6853671974/main/esp32_esp8266_portao_garagem/bin_version.txt"
 #define URL_fw_Bin "https://raw.githubusercontent.com/gigahertzinformatica/6853671974/main/esp32_esp8266_portao_garagem/fw.bin"

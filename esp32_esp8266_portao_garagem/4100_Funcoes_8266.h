@@ -506,15 +506,15 @@ void MonitoraNovaVersaoFirmWare(){
       delay(2000);
       Serial.print(FirmwareVer);
       Serial.print(" <<<<====");
-      delay(2000);
-      Serial.println();
-      Serial.println();
+  delay(1000);
+  Serial.println();
+  Serial.println();
       Serial.print("AINDA NÃO HÁ VERSÃO NOVA DO FIRMWARE, JÁ FOI VERIFICADO....>> ");
       Serial.print(idle_counter++);
       Serial.print(" <<....VEZES");
-      delay(2000);
-      Serial.println();
-      Serial.println();
+  delay(1000);
+  Serial.println();
+  Serial.println();
      if(idle_counter%2==0)
       digitalWrite(LED_BUILTIN, HIGH);
      else 
@@ -542,15 +542,13 @@ void SetClock() {
     Serial.print(".");
     now = time(nullptr);
   }
-  delay(2000);
+  delay(1000);
   Serial.println();
   Serial.println();
   struct tm timeinfo;
   gmtime_r(&now, &timeinfo);
   Serial.print("====>>>> HORA ATUALIZADA PARA: ");
   Serial.print(asctime(&timeinfo));
-  Serial.println();
-  Serial.println();
   
 } 
 //
@@ -581,13 +579,14 @@ void AtualizarFirmWare(){
   payload.trim();
   if(payload.equals(FirmwareVer) )
   {   
+  delay(1000);
   Serial.println();
   Serial.println();
   Serial.print("====>>>> ESP JÁ ESTÁ COM VERSÃO MAIS ATUAL <<<<====");
-  delay(2000);
   }
   else
   {
+  delay(1000);
   Serial.println();
   Serial.println();
   Serial.print("====>>>> NOVA VERSÃO DETECTADA, FIRMWARE SERÁ ATUALIZADO AGORA <<<<====");
