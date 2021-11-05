@@ -198,7 +198,6 @@ if (WiFi.status() != WL_CONNECTED){
         
     if (!clientMqtt.connected()){
           
-          delay(1000);
           Serial.println();
           Serial.print("%%%%%%%%%%% Falha na conexao do Cliente Mqtt  %%%%%%%%%%%");
           delay(2000);
@@ -228,7 +227,7 @@ void ReconectWiFi(){
 
     while ((WiFi.status() != WL_CONNECTED) && (contadorConWifi <= 3)){
 
-      delay(3000);
+      delay(2000);
 
       Serial.println();
       Serial.print("%%%%%%%%%%% Tentativa de reconectar na rede: ");

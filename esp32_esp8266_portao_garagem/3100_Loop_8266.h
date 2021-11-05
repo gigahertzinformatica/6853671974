@@ -22,7 +22,7 @@ if(((WiFi.status()) != (WL_CONNECTED)) or (!clientMqtt.connected())){
         
         Serial.println();
         Serial.print("--------- Falha na conexao -->>   ");
-        delay(2000);
+        delay(500);
         VerificaConexoesWiFIeMQTT();
         
 
@@ -47,9 +47,9 @@ if(((WiFi.status()) != (WL_CONNECTED)) or (!clientMqtt.connected())){
         Serial.print(contadorMqttLoop);
 
         }
-        contadorMqttLoop = 2000;
+        contadorMqttLoop = 200;
 
-        delay(1000);
+        delay(500);
         Serial.println();
         Serial.print("--------- Loop completo -->>   ");
 
