@@ -500,12 +500,15 @@ void MonitoraNovaVersaoFirmWare(){
     if ((currentMillis - previousMillis_2) >= mini_interval) {
       static int idle_counter=0;
       previousMillis_2 = currentMillis;
-      Serial.println();    
-      Serial.print("VERSÃO ATUAL NO ESP É: ");
+      Serial.println();
+      Serial.println();   
+      Serial.print("====>>>> Versão Atual ====>>>> ");
+      delay(2000);
+      Serial.print(FirmwareVer);
+      Serial.print(" <<<<====");
       delay(2000);
       Serial.println();
       Serial.println();
-      Serial.println(FirmwareVer);
       Serial.print("AINDA NÃO HÁ VERSÃO NOVA DO FIRMWARE, JÁ FOI VERIFICADO....>> ");
       Serial.print(idle_counter++);
       Serial.print(" <<....VEZES");
@@ -546,7 +549,8 @@ void SetClock() {
   gmtime_r(&now, &timeinfo);
   Serial.print("====>>>> HORA ATUALIZADA PARA: ");
   Serial.print(asctime(&timeinfo));
-  Serial.print(" <<<<====");
+  Serial.println();
+  Serial.println();
   
 } 
 //
